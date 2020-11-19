@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import FileSaver from "./FileSaver.js";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Download and rename many files</h1>
+      <p>import a csv or a tsv with 2 columns:</p>
+      <ul>
+        <li>a url to the file</li>
+        <li>the filename that includes the original extension</li>
+      </ul>
+      <FileSaver />
     </div>
   );
 }
