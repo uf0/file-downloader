@@ -1,16 +1,20 @@
 import FileSaver from "./FileSaver.js";
-import "./App.css";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Download and rename many files</h1>
-      <p>import a csv or a tsv with 2 columns:</p>
-      <ul>
-        <li>a url to the file</li>
-        <li>the filename that includes the original extension</li>
-      </ul>
-      <FileSaver />
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <h1>Download and rename many files</h1>
+          <p>Load a <kbd>.csv</kbd> or a <kbd>.tsv</kbd> with 2 columns:</p>
+          <ul>
+            <li>a url to the file</li>
+            <li>the filename you want to give to the downloaded file (with original extension)</li>
+          </ul>
+          <FileSaver />
+        </div>
+      </div>
     </div>
   );
 }
