@@ -3,7 +3,6 @@ import * as d3 from "d3";
 
 const FileSaver = () => {
   const loadFile = (input)=>{
-		console.log(input)
     const file = input.files[0];
     const arr = file.name.split(".");
     const extension = arr[arr.length - 1];
