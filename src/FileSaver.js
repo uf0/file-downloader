@@ -12,9 +12,10 @@ const FileSaver = () => {
 
     reader.onload = function (event) {
       const fileList = dsv.parse(event.target.result);
+      console.log(fileList)
       window.alert("Start downloads");
       fileList.forEach((f, i) => {
-        saveAs("https://api.allorigins.win/raw?url=" + f.url, f.filename);
+        saveAs("https://api.allorigins.win/raw?url=" + f.url, f.fileName);
       });
     };
     reader.readAsText(file);
